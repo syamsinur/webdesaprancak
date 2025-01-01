@@ -12,6 +12,7 @@ header.container-navbar {
     display: flex;
     flex-basis: 100%;
     justify-content: center;
+    margin: 30px;
 }
 
 header.container-navbar .judul {
