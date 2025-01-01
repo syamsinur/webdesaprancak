@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #F8FAFC;
+}
+
+header.container-navbar {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+header.container-navbar .judul {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+header.container-navbar .logo img {
+    width: 84px;
+}
+
+header.container-navbar .nama-judul h1 {
+    font-size: 36px;
+    text-shadow: 0 4px 4px rgb(119, 119, 119);
+}
+
+header nav.list-navbar {
+    display: flex;
+    align-items: center;
+    background-color: #D9EAFD;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+header nav.list-navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 32px;
+}
+
+header nav.list-navbar ul li.home{
+    background-color: #9AA6B2;
+    border-radius: 8px;
+    padding: 3px;
+    color: #D9EAFD;
+}
+
+header nav.list-navbar ul li {
+    list-style: none;
+}
+
+header nav.list-navbar ul li a{
+    color: inherit;
+    text-decoration: none;
+}
+
