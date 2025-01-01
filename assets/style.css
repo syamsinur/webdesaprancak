@@ -6,13 +6,16 @@
 
 body {
     background-color: #F8FAFC;
+    margin: 30px;
 }
+
+/* bagian header */
 
 header.container-navbar {
     display: flex;
     flex-basis: 100%;
     justify-content: center;
-    margin: 30px;
+    
 }
 
 header.container-navbar .judul {
@@ -64,3 +67,21 @@ header nav.list-navbar ul li a{
     text-decoration: none;
 }
 
+/* bagian main */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .welcome h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+main aside img{
+    width: 600px;
+    clip-path: circle(40%);
+    filter: brightness(50%);
+}
