@@ -68,20 +68,63 @@ header nav.list-navbar ul li a{
 }
 
 /* bagian main */
+/* konten1 */
 
-main {
+main .konten1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .welcome h1 {
+main .konten1 .welcome h2 {
     font-size: 48px;
     text-align: center;
 }
 
-main aside img{
+main .konten1 aside img{
     width: 600px;
     clip-path: circle(40%);
     filter: brightness(50%);
+}
+
+/* konten2 */
+
+main .konten2 .sejarah h2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+main .konten2 .sejarah p {
+    text-align: justify;
+    font-size: 24px;
+    padding: 100px 100px 0 100px;
+}
+
+/* konten3 */
+
+main .konten3 .visi-misi h2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+main .konten3 .visi-misi {
+    text-align: justify;
+    font-size: 24px;
+    padding: 100px 100px 0 100px;
+}
+
+main .konten3 .visi-misi h2{
+    padding-bottom: 100px;
+}
+
+main .konten3 .visi-misi p.visi {
+    padding: 20px 20px 20px 0;
+}
+
+main .konten3 .visi-misi ul.misi {
+    padding: 20px;
+}
+
+main .konten3 .visi-misi ul.misi li {
+    margin-left: 10px;
 }
