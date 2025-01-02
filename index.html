@@ -19,10 +19,15 @@
         <nav class="list-navbar">
             <ul>
                 <li class="home"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Struktur</a></li>
-                <li><a href="#">Layanan</a></li>
-                <li><a href="#">Kegiatan</a></li>
+                <li class="except-home"><a href="#">Profile</a>
+                    <ul class="dropdown">
+                        <li><a href="#sejarah">Sejarah Desa</a></li>
+                        <li><a href="#visi-misi">Visi dan Misi</a></li>
+                    </ul>
+                </li>
+                <li class="except-home"><a href="#">Struktur</a></li>
+                <li class="except-home"><a href="#">Layanan</a></li>
+                <li class="except-home"><a href="#">Kegiatan</a></li>
             </ul>
         </nav>
     </header>
@@ -37,13 +42,13 @@
         </div>
         <div class="konten2">
             <div class="sejarah">
-                <h2>Sejarah Desa</h2>
+                <h2 id="sejarah">Sejarah Desa</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
         </div>
         <div class="konten3">
             <div class="visi-misi">
-                <h2>Visi dan Misi</h2>
+                <h2 id="visi-misi">Visi dan Misi</h2>
                 <h3>Visi :</h3>
                 <p class="visi">Terwujudnya Kehidupan Masyarakat Desa Prancak yang Religius, Aman, Harmonis, Maju, Adil, dan Tertib.</p>
                 <h3>Misi :</h3>
