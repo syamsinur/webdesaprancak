@@ -148,16 +148,13 @@ main .konten2 .sejarah p {
 main .konten3 .visi-misi h2 {
     font-size: 48px;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 main .konten3 .visi-misi {
     text-align: justify;
     font-size: 24px;
     padding: 100px 100px 0 100px;
-}
-
-main .konten3 .visi-misi h2{
-    padding-bottom: 100px;
 }
 
 main .konten3 .visi-misi p.visi {
@@ -171,3 +168,30 @@ main .konten3 .visi-misi ul.misi {
 main .konten3 .visi-misi ul.misi li {
     margin-left: 10px;
 }
+
+/* konten 4 */
+
+main .konten4 .struktur h2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 48px;
+    text-align: center;
+}
+
+main .konten4 .struktur .isi-struktur img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+main .konten4 .struktur .isi-struktur > div {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+    margin-bottom: 200px;   
+}
+
+
+
+
