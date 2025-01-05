@@ -127,6 +127,7 @@ main .konten1 .welcome h2 {
 main .konten1 aside img{
     width: 600px;
     clip-path: circle(40%);
+    object-fit: cover;
     filter: brightness(50%);
 }
 
