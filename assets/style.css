@@ -47,7 +47,7 @@ header nav.list-navbar ul {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 header nav.list-navbar ul li a {
@@ -179,18 +179,9 @@ main .konten4 .struktur h2 {
     text-align: center;
 }
 
-main .konten4 .struktur .isi-struktur img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-main .konten4 .struktur .isi-struktur > div {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 50px;
-    text-align: center;
-    margin-bottom: 200px;   
+main .konten4 .struktur img {
+    width: 100%;
+    margin-bottom: 100px;
 }
 
 /* konten 5 */
@@ -217,6 +208,11 @@ main .konten5 .sekolah .isi-sekolah img {
 main .konten5 .sekolah .isi-sekolah h3 {
     margin-bottom: 10px;
 }
+
+@media screen and (max-width:750px){
+    
+}
+
 
 
 

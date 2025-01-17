@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Keterangan Tidak Mampu</title>
+    <link rel="stylesheet" href="assets/style-form.css">
+</head>
+<body>
+    <div id="form-container">
+        <h2>Form Surat Pengantar Keterangan Tidak Mampu</h2>
+        <form id="skck-form">
+            <div class="form-group">
+                <label class="label" for="nama">Nama: </label>
+                <input class="txtfield" type="text" id="nama" placeholder="Nama Lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="nik">NIK: </label>
+                <input class="txtfield" type="number" id="nik" placeholder="NIK" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="kelamin">Jenis Kelamin: </label>
+                <select class="txtfield" id="kelamin">
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="ttl">Tempat, Tanggal Lahir: </label>
+                <input class="txtfield" type="text" id="ttl" placeholder="contoh: Bangkalan, 20-02-2002" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="status">Status Perkawinan: </label>
+                <select class="txtfield" id="status">
+                    <option value="Belum Kawin">Belum Kawin</option>
+                    <option value="Kawin">Kawin</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="agama">Agama: </label>
+                <input class="txtfield" type="text" id="agama" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="pekerjaan">Pekerjaan: </label>
+                <input class="txtfield" type="text" id="pekerjaan" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="alamat">Alamat: </label>
+                <textarea class="txtfield" id="alamat" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="keperluan">Keperluan: </label>
+                <input class="txtfield" type="text" id="keperluan" required>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-back" type="button" onclick="history.back()">Kembali</button>
+                <button class="btn-submit" type="button" onclick="generatePDF2()">Download Surat</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
