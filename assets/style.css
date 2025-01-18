@@ -403,7 +403,7 @@ footer {
     main .konten1 {
         margin-top: 60px;
     }
-    
+
     main .konten1 .welcome h2 {
         font-size: 24px;
         padding: 10px;
@@ -414,7 +414,7 @@ footer {
     }
 
     main .konten2 .sejarah p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     main .konten3 .visi-misi h2{
@@ -422,7 +422,7 @@ footer {
     }
 
     main .konten3 .visi-misi {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     main .konten3 .visi-misi ul.misi li {
@@ -432,6 +432,7 @@ footer {
     main .konten4 .struktur h2{
         font-size: 16px;
     }
+    
 
     /* Konten Sekolah */
     main .konten5 .sekolah h2{
@@ -442,7 +443,7 @@ footer {
         width: 100%;
         height: auto;
     }
-    main .konten5 .sekolah .isi-sekolah .sd1 h3{
+    main .konten5 .sekolah .isi-sekolah .sd1 h3 {
         flex-direction: column;
         gap: 20px;
         padding: 10px;
@@ -450,7 +451,7 @@ footer {
         margin-top: -20px;
     }
 
-    main .konten5 .sekolah .isi-sekolah .sd2 h3{
+    main .konten5 .sekolah .isi-sekolah .sd2 h3 {
         flex-direction: column;
         gap: 20px;
         padding: 10px;
