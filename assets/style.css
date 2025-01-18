@@ -38,7 +38,7 @@ header nav.list-navbar {
     display: flex;
     align-items: center;
     background-color: #D9EAFD;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 header nav.list-navbar ul {
@@ -209,10 +209,216 @@ main .konten5 .sekolah .isi-sekolah h3 {
     margin-bottom: 10px;
 }
 
-@media screen and (max-width:750px){
-    
+/* footer */
+
+footer {
+    background-color: #D9EAFD;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    margin-top: 50px;
 }
 
+
+/* responsif */
+
+/* Responsivitas untuk perangkat handphone (max-width: 480px) */
+/* Responsivitas untuk perangkat besar (desktop kecil, max-width: 1024px) */
+@media (max-width: 1024px) {
+    header.container-navbar .judul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header.container-navbar .judul h1 {
+        font-size: 30px;
+    }
+
+    header nav.list-navbar ul {
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    main .konten1 {
+        margin-top: 80px;
+        justify-content: space-around;
+    }
+}
+
+/* Responsivitas untuk perangkat tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    header.container-navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header.container-navbar .judul {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+
+    header.container-navbar .logo img {
+        width: 50px;
+    }
+
+    header nav.list-navbar ul {
+        width: 100%;
+    }
+
+    header nav.list-navbar ul li {
+        padding: 30px 20px;
+        border-radius: 5px;
+    }
+
+    /* Konten1 */
+    main .konten1 {
+        margin-top: 150px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    main .konten1 aside img {
+        width: 100%;
+        clip-path: circle(40%);
+        filter: brightness(70%);
+        margin: 10px 0;
+    }
+
+    /* Konten2 */
+    main .konten2 .sejarah h2{
+        font-size: 24px;
+    }
+
+    main .konten2 .sejarah p {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    /* Konten3 */
+    main .konten3 .visi-misi h2{
+        font-size: 24px;
+    }
+
+    main .konten3 .visi-misi {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    /* konten4 */
+    main .konten4 .struktur h2{
+        font-size: 24px;
+    }
+
+    /* Konten5 */
+    main .konten5 .sekolah h2{
+        font-size: 24px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        background-color: #D9EAFD;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #333;
+        margin-top: 50px;
+    }
+}
+
+/* Responsivitas untuk perangkat handphone (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    header.container-navbar .judul {
+        align-items: center;
+        gap: 10px;
+    }
+
+    header.container-navbar .nama-judul h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    header nav.list-navbar ul {
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    header nav.list-navbar ul li {
+        padding: 10px 5px;
+        border-radius: 3px;
+    }
+
+    header nav.list-navbar ul li.home {
+        background-color: #9AA6B2;
+        border-radius: 3px;
+        padding: 10px 5px;
+        color: #D9EAFD;
+        transition: background-color 0.3s ease;
+    }
+
+    header nav.list-navbar ul li.except-home {
+        position: relative;
+        border-radius: 3px;
+        padding: 10px 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-icon {
+        font-size: 10px;
+    }
+
+    /* Konten */
+    main .konten1 .welcome h2 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    main .konten2 .sejarah p {
+        font-size: 14px;
+    }
+
+    main .konten3 .visi-misi {
+        font-size: 14px;
+    }
+
+    main .konten3 .visi-misi ul.misi li {
+        margin-left: 10px;
+    }
+
+    /* Konten Sekolah */
+    main .konten5 .sekolah .isi-sekolah img {
+        width: 100%;
+        height: auto;
+    }
+    footer {
+        background-color: #D9EAFD;
+        text-align: center;
+        padding: 10px;
+        font-size: 8px;
+        color: #333;
+        margin-top: 50px;
+    }
+}
+
+/* Tambahan: Hide overflow */
+body {
+    overflow-x: hidden;
+}
 
 
 

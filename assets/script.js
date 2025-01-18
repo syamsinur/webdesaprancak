@@ -34,6 +34,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener('click', function(e) {
+  const dropdowns = document.querySelectorAll('.except-home ul.dropdown');
+  dropdowns.forEach(dropdown => {
+      if (!dropdown.parentElement.contains(e.target)) {
+          dropdown.style.display = 'none';
+      } else {
+          dropdown.style.display = 'flex';
+      }
+  });
+});
+
+
 async function generatePDF() {
     // Ambil data dari form
     const nama = document.getElementById('nama').value;
