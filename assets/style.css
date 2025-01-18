@@ -291,7 +291,7 @@ footer {
 
     /* Konten2 */
     main .konten2 .sejarah h2{
-        font-size: 24px;
+        font-size: 28px;
     }
 
     main .konten2 .sejarah p {
@@ -301,7 +301,8 @@ footer {
 
     /* Konten3 */
     main .konten3 .visi-misi h2{
-        font-size: 24px;
+        font-size: 28px;
+        margin-bottom: -80px;
     }
 
     main .konten3 .visi-misi {
@@ -311,18 +312,34 @@ footer {
 
     /* konten4 */
     main .konten4 .struktur h2{
-        font-size: 24px;
+        font-size: 28px;
+        margin-bottom: -80px;
     }
 
     /* Konten5 */
     main .konten5 .sekolah h2{
-        font-size: 24px;
+        font-size: 28px;
+        margin-bottom: -80px;
     }
 
     main .konten5 .sekolah .isi-sekolah {
         flex-direction: column;
         gap: 20px;
         padding: 10px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah .sd1 p{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah .sd2 p{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-size: 16px;
     }
 
     main .konten5 .sekolah .isi-sekolah img {
@@ -383,13 +400,24 @@ footer {
     }
 
     /* Konten */
+    main .konten1 {
+        margin-top: 60px;
+    }
     main .konten1 .welcome h2 {
         font-size: 24px;
         padding: 10px;
     }
 
+    main .konten2 .sejarah h2{
+        font-size: 16px;
+    }
+
     main .konten2 .sejarah p {
         font-size: 14px;
+    }
+
+    main .konten3 .visi-misi h2{
+        font-size: 16px;
     }
 
     main .konten3 .visi-misi {
@@ -400,11 +428,51 @@ footer {
         margin-left: 10px;
     }
 
+    main .konten4 .struktur h2{
+        font-size: 16px;
+    }
+
     /* Konten Sekolah */
+    main .konten5 .sekolah h2{
+        font-size: 16px;
+    }
+
     main .konten5 .sekolah .isi-sekolah img {
         width: 100%;
         height: auto;
     }
+    main .konten5 .sekolah .isi-sekolah .sd1 h3{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: -20px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah .sd2 h3{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: -20px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah .sd1 p{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
+    main .konten5 .sekolah .isi-sekolah .sd2 p{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-size: 12px;
+        margin-top: -20px;
+    }
+
     footer {
         background-color: #D9EAFD;
         text-align: center;
