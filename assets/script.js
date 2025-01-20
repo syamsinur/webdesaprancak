@@ -155,8 +155,8 @@ async function generatePDF() {
     const valueX = 90;
 
     const labels = [
-        'Nama',
-        'NIK',
+        'NAMA',
+        'N.I.K',
         'TEMPAT, TANGGAL LAHIR',
         'KEWARGANEGARAAN',
         'PENDIDIKAN TERAKHIR',
@@ -212,20 +212,25 @@ async function generatePDF() {
     y += 23;
     doc.setFont("times", "bold");
     doc.text('SUWAIFI MUNIR', 140, y);
-    doc.setFont("times", "normal");
+    const textWidth3 = doc.getTextWidth('SUWAIFI MUNIR');
+    const startX3 = 140 // Pusatkan garis di tengah halaman
+    doc.line(startX3, 247, startX3 + textWidth3, 247); // 240 adalah posisi Y setelah teks
     doc.text(nama, 20, y); 
+    const textWidth2 = doc.getTextWidth('Nama yang bersangkutan');
+    const startX2 = 20 // Pusatkan garis di tengah halaman
+    doc.line(startX2, 247, startX2 + textWidth2, 247);
     y += 12;
 
+    doc.setFont("times", "normal");
     // Tanda tangan Kapolsek, Koramil, dan Camat
-    const tandaTanganY = y + 30; // Pindahkan lebih jauh ke bawah
-    doc.setFont("times", "bold");
-    doc.text('KAPOLSEK SEPULU', 25, tandaTanganY - 20); // Nama jabatan dinaikkan
+    const tandaTanganY = y + 24; // Pindahkan lebih jauh ke bawah
+    doc.text('KAPOLSEK SEPULU', 25, tandaTanganY - 25); // Nama jabatan dinaikkan
     doc.line(20, tandaTanganY + 5, 68, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
 
-    doc.text('KORAMIL SEPULU', 85, tandaTanganY - 20); // Nama jabatan dinaikkan
+    doc.text('KORAMIL SEPULU', 85, tandaTanganY - 25); // Nama jabatan dinaikkan
     doc.line(80, tandaTanganY + 5, 128, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
 
-    doc.text('CAMAT SEPULU', 145, tandaTanganY - 20); // Nama jabatan dinaikkan
+    doc.text('CAMAT SEPULU', 145, tandaTanganY - 25); // Nama jabatan dinaikkan
     doc.line(140, tandaTanganY + 5, 188, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
 
 
@@ -355,9 +360,14 @@ async function generatePDF() {
             currentY += 15;
             doc.text(`Surat keterangan ini diberikan kepada yang bersangkutan sebagai persyaratan pengajuan`, 20, currentY);
             currentY += 7;
+            doc.setFont("times", "bold");
             doc.text(`${keperluan}.`, 20, currentY);
+            const textWidth2 = doc.getTextWidth(keperluan);
+            const startX2 = 20 // Pusatkan garis di tengah halaman
+            doc.line(startX2, 168, startX2 + textWidth2, 168); // 168 adalah posisi Y setelah teks
 
             // Penutup surat
+            doc.setFont("times", "normal");
             currentY += 15;
             doc.text("Demikian surat keterangan ini kami buat dan dapat dipergunakan sebagaimana mestinya.", 20, currentY);
 
@@ -373,6 +383,9 @@ async function generatePDF() {
             currentY += 30;
             doc.setFont("times", "bold");
             doc.text("SUWAIFI MUNIR", 140, currentY);
+            const textWidth3 = doc.getTextWidth("SUWAIFI MUNIR");
+            const startX3 = 140 // Pusatkan garis di tengah halaman
+            doc.line(startX3, 240, startX3 + textWidth3, 240); // 240 adalah posisi Y setelah teks
 
             // Simpan PDF
             doc.save(`Surat_Keterangan_Tidak_Mampu_${nama}.pdf`);
