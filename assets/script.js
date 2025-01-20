@@ -50,7 +50,6 @@ async function generatePDF() {
     // Ambil data dari form
     const nama = document.getElementById('nama').value;
     const nik = document.getElementById('nik').value;
-    const kelamin = document.getElementById('kelamin').value;
     const ttl = document.getElementById('ttl').value;
     const status = document.getElementById('status').value;
     const kewarganegaraan = document.getElementById('kewarganegaraan').value;
@@ -158,26 +157,24 @@ async function generatePDF() {
     const labels = [
         'Nama',
         'NIK',
-        'Jenis Kelamin',
-        'Tempat, Tanggal Lahir',
-        'Status Perkawinan',
-        'Kewarganegaraan',
-        'Pendidikan Terakhir',
-        'Agama',
-        'Pekerjaan',
-        'Alamat',
-        'Keperluan',
-        'Lain-lain',
+        'TEMPAT, TANGGAL LAHIR',
+        'KEWARGANEGARAAN',
+        'PENDIDIKAN TERAKHIR',
+        'AGAMA',
+        'STATUS PERKAWINAN',
+        'PEKERJAAN',
+        'ALAMAT',
+        'KEPERLUAN',
+        'LAIN-LAIN',
     ];
     const values = [
         nama,
         nik,
-        kelamin,
         ttl,
-        status,
         kewarganegaraan,
         pendidikan,
         agama,
+        status,
         pekerjaan,
         alamat,
         keperluan,
@@ -189,7 +186,7 @@ async function generatePDF() {
         doc.text(label, labelX, y); // Cetak label
         doc.text(':', colonX, y); // Cetak titik dua di posisi tetap
         doc.text(values[index] || '-', valueX, y); // Cetak nilai
-        y += lineHeight; // Pindah ke baris berikutnya
+        y += lineHeight + 3; // Pindah ke baris berikutnya
     });
 
 
@@ -198,9 +195,8 @@ async function generatePDF() {
         'Demikian Surat Keterangan Kelakuan Baik ini dibuat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.',
         170
     );
-    y += 10;
     doc.text(closingText, 20, y);
-    y += 20;
+    y += 15;
 
     // Tanggal otomatis
     const today = new Date();
@@ -213,21 +209,24 @@ async function generatePDF() {
     y += 5;
     doc.text('KEPALA DESA PRANCAK', 140, y);
     doc.text('Yang Bersangkutan', 20, y); // Tanda tangan sejajar
-    y += 27;
+    y += 23;
+    doc.setFont("times", "bold");
     doc.text('SUWAIFI MUNIR', 140, y);
+    doc.setFont("times", "normal");
     doc.text(nama, 20, y); 
     y += 12;
 
     // Tanda tangan Kapolsek, Koramil, dan Camat
     const tandaTanganY = y + 30; // Pindahkan lebih jauh ke bawah
-    doc.text('Kapolsek Sepulu', 30, tandaTanganY - 20); // Nama jabatan dinaikkan
-    doc.line(20, tandaTanganY + 5, 70, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
+    doc.setFont("times", "bold");
+    doc.text('KAPOLSEK SEPULU', 25, tandaTanganY - 20); // Nama jabatan dinaikkan
+    doc.line(20, tandaTanganY + 5, 68, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
 
-    doc.text('Koramil Sepulu', 90, tandaTanganY - 20); // Nama jabatan dinaikkan
-    doc.line(80, tandaTanganY + 5, 130, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
+    doc.text('KORAMIL SEPULU', 85, tandaTanganY - 20); // Nama jabatan dinaikkan
+    doc.line(80, tandaTanganY + 5, 128, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
 
-    doc.text('Camat Sepulu', 150, tandaTanganY - 20); // Nama jabatan dinaikkan
-    doc.line(140, tandaTanganY + 5, 190, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
+    doc.text('CAMAT SEPULU', 145, tandaTanganY - 20); // Nama jabatan dinaikkan
+    doc.line(140, tandaTanganY + 5, 188, tandaTanganY + 5); // Garis tanda tangan lebih ke bawah
 
 
     // Simpan file PDF
@@ -372,6 +371,7 @@ async function generatePDF() {
             currentY += 7;
             doc.text("KEPALA DESA PRANCAK", 140, currentY);
             currentY += 30;
+            doc.setFont("times", "bold");
             doc.text("SUWAIFI MUNIR", 140, currentY);
 
             // Simpan PDF
