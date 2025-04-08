@@ -35,7 +35,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('click', function(e) {
-  const dropdowns = document.querySelectorAll('.except-home ul.dropdown');
+  const dropdowns = document.querySelectorAll('.except-home ul.dropdown li.dropdown-item');
   dropdowns.forEach(dropdown => {
       if (!dropdown.parentElement.contains(e.target)) {
           dropdown.style.display = 'none';
